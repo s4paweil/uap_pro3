@@ -52,7 +52,7 @@ def generate_parse_tree_dot_file(ast, file_path, extensive):
 
 if __name__ == '__main__':
     # Path to .tripla-File
-    file_path = "triplaprograms/ggT_euclid_rec.tripla"
+    file_path = "triplaprograms/simple_if_5.tripla"
     ast = build_ast(file_path)
 
     # Print program to console

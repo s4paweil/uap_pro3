@@ -85,10 +85,7 @@ class BINOP(syntax.BINOP, Compiler):
             code_operator = neq()
         elif self.operator == '==':
             code_operator = eq()
-        else:
-            code_operator = "Ungültiger Operator"
-
-        if self.operator == '||':
+        elif self.operator == '||':
             l1 = Label()
             l2 = Label()
             code_arg2[0].assigned_labels += [l1]
@@ -107,8 +104,34 @@ class BINOP(syntax.BINOP, Compiler):
                     code_arg2 +
                     [mul(), goto(l2), const(0, assigned_label=l1), nop(assigned_label=l2)]
             )
+        elif self.operator == '<=':
+            l1 = Label()
+            l2 = Label()
+            code_args = code_arg1 + code_arg2
+            code_args_labeled = copy.deepcopy(code_args)
+            code_args_labeled[0].assigned_labels += [l1]
+            return(
+                    code_args + [lt()] +
+                    [ifzero(l1), const(1), goto(l2)] +
+                    code_args_labeled + [eq()] +
+                    [nop(assigned_label=l2)]
+            )
+        elif self.operator == '>=':
+            l1 = Label()
+            l2 = Label()
+            code_args = code_arg1 + code_arg2
+            code_args_labeled = copy.deepcopy(code_args)
+            code_args_labeled[0].assigned_labels += [l1]
+            return(
+                    code_args + [gt()] +
+                    [ifzero(l1), const(1), goto(l2)] +
+                    code_args_labeled + [eq()] +
+                    [nop(assigned_label=l2)]
+            )
         else:
-            return code_arg1 + code_arg2 + [code_operator]
+            code_operator = "Ungültiger Operator"
+
+        return code_arg1 + code_arg2 + [code_operator]
 
 
 class CONST(syntax.CONST, Compiler):

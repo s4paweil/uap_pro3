@@ -9,6 +9,7 @@ Kennung: s4paweil
 
 ## Anleitung zum Ausführen des Compilers
 
+- Wie zuvor enthält *requirements.txt* (unverändert zu Projekt 2) alle erforderlichen Abhängigkeiten.
 - In *main.py* kann im *main-Block* angegeben werden, welches Tripla-Programm übersetzt werden soll. Hierzu muss lediglich der Pfad zum Tripla-Programm angegeben werden.  
 Die Methode *ast.to_code()* liefert den überstezten TRAM-Code zurück.
  - Ausgabe: Das Programm kann auf der Konsole ausgegeben oder in ein *.txt*-File geschrieben werden.
