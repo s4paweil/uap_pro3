@@ -1,5 +1,4 @@
 import graphviz
-import instruction
 from triplalex import lexer
 import triplayacc
 from instruction import print_prog,write_tramCode_to_file
@@ -52,7 +51,7 @@ def generate_parse_tree_dot_file(ast, file_path, extensive):
 
 if __name__ == '__main__':
     # Path to .tripla-File
-    file_path = "triplaprograms/simple_if_5.tripla"
+    file_path = "triplaprograms/code_Uebung04.tripla"
     ast = build_ast(file_path)
 
     # Print program to console
