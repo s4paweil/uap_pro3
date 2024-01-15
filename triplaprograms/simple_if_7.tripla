@@ -1,0 +1,1 @@
+if (2 == 0 == false) then 1 else 0

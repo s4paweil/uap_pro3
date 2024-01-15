@@ -1,0 +1,8 @@
+let ggT(a, b) {
+    if (a == b) then
+        a
+    else if (a > b) then
+            ggT(a-b, b)
+        else
+            ggT(b-a, a)
+} in ggT(3528, 3780) // result should be 252

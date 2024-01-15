@@ -1,0 +1,8 @@
+let wrapper(a, b) {
+    let ggt(noneSense) {
+        if a == b then a
+        else
+            if a > b then wrapper(a-b, b)
+            else wrapper(b-a, a)
+    } in ggt(0)
+} in wrapper(21, 49)

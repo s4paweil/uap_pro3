@@ -1,0 +1,9 @@
+let func(a, b) {
+	let func(a, b) {
+		a * b
+	} in
+	do {
+        b = b + 1 * func(3, 1);
+        a = a - 1
+    } while ( a > 0 && b != a )
+} in func(10, 8)

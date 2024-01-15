@@ -1,0 +1,7 @@
+let func(a,b) {
+        while ( a > 0 && b != a ) do {
+          b = b + 1;
+          a = a - 1
+        } 
+    }
+in func(10, 8)

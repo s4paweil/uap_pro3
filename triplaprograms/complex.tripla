@@ -1,0 +1,15 @@
+let 
+f1(b) {
+if(b==0) then 0 else f1(b-1)
+}
+f2(a, b) {
+    if(a > b) then f1(a) else f1(b);
+    let g(c) {
+        a*b*c
+    } in g(a*b)
+}
+in 
+f1(10); f2(10, let max(a, b) {
+            if(a > b) then a else b
+        }
+        in max(20, 30))

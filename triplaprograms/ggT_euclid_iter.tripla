@@ -1,0 +1,12 @@
+let ggT(a, b) {
+    if (a == b) then
+        a
+    else
+        do {
+            if (a > b) then
+                a = a - b
+            else
+                b = b - a
+        } while (a != b);
+        a
+} in ggT(3528, 3780) // result should be 252

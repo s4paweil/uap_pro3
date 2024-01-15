@@ -1,0 +1,13 @@
+let f(a, b) {
+	if (a == 0) then
+		2 + b
+	else
+		let g(a, c) {
+			a + c + b
+		} in 2 + g(a, b)
+} g(c, d) {
+	if (c == 0) then
+		1 + d
+	else
+		c * f(c - 1, d)
+} in f (2, 3); g (3, 2)

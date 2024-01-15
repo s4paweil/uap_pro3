@@ -1,0 +1,38 @@
+let 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+  fac(x) { 
+    if (x == 1) then 1
+    else fac(x-1)*x 
+  } 
+in fac(3)

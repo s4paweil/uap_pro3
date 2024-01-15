@@ -1,0 +1,4 @@
+let mult(a,b) { a*b }
+    add(a,b) { let inc(a) { if (b!=0) then b=b-1;inc(a+1) else mult(a,1) }
+               in inc(a) }
+in add(mult(2,3),add(4,5))
